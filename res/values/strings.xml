@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TaskListManagerPro</string>
+    <string name="action_settings">Settings</string>
+    <string name="exit">Exit</string>
+    <string name="help">Help</string>
+    <string name="preferences">Preferences</string>
+    <string name="enable_auto_delete_this_option_allows_the_app_to_automatically_delete_marked_checked_items_on_exit_">Enable auto-delete. This option allows the app to automatically delete marked/checked items on exit.</string>
+    <string name="save_and_exit">Save and Exit</string>
+    <string name="textclock">TextClock</string>
+    <string name="total_items_">"Total Items: "</string>
+    <string name="total_checked_">"Total Checked: "</string>
+    <string name="total_high_">"Total High: "</string>
+    <string name="total_medium_">"Total Medium: "</string>
+    <string name="total_low_">"Total Low: "</string>
+    <string name="enter_task_details_here_click_add_to_add_to_list_">Enter task details here. Click add to add to list.</string>
+    <string name="delete_all">Delete All</string>
+    <string name="delete_done">Delete Done</string>
+    <string name="clear">Clear</string>
+    <string name="overwrite">Overwrite</string>
+    <string name="add">Add</string>
+    <string name="drag_the_seekbar_on_the_right_to_change_the_maximum_number_of_characters_to_be_displayed_">Drag the seekbar on the right to change the maximum number of characters to be displayed.</string>
+
+</resources>

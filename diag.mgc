@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class
+        name="com.example.testapp.preferences.TaskListSharedPreferences"
+        x="458" y="295">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.example.testapp.MainActivity"
+            endpointName="main" kind="Simple"/>
+    </Class>
+    <Class name="com.example.testapp.MainActivity" x="77" y="113">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.example.testapp.database.DBHelper"
+            endpointName="helper" kind="Simple"/>
+        <Association
+            destinationClassName="com.example.testapp.preferences.OptionsMenu"
+            endpointName="optionsMenu" kind="Simple"/>
+        <Association
+            destinationClassName="com.example.testapp.MainActivity.MyAdapter"
+            endpointName="adapter" kind="Simple"/>
+        <Association
+            destinationClassName="com.example.testapp.preferences.TaskListSharedPreferences"
+            endpointName="autodeleteprefs" kind="Simple"/>
+        <Communication destinationClassName="com.example.testapp.preferences.TaskListSharedPreferences"/>
+        <Communication destinationClassName="com.example.testapp.preferences.OptionsMenu"/>
+    </Class>
+    <Class name="com.example.testapp.preferences.OptionsMenu" x="493" y="165">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.example.testapp.database.DBHelper" x="347" y="21">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.example.testapp.database.DBHelper"
+            endpointName="helper" kind="Simple"/>
+    </Class>
+    <Class name="com.example.testapp.MainActivity.ViewHolder" x="168" y="-24">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.example.testapp.MainActivity.MyAdapter" x="53" y="40">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.example.testapp.MainActivity"/>
+    </Class>
+</ClassDiagram>
