@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
@@ -24,11 +25,13 @@ import com.productivity.tasklistmanagerpro.launcher.MainActivity;
 
 //class that provides savepreferences for autodelete feature
 public class TaskListSharedPreferences {
-	SharedPreferences autoDeletesharedPreferences, maxCharLimitSharedPrefs;
+	SharedPreferences autoDeletesharedPreferences, maxCharLimitSharedPrefs,
+			textFileName;
 
 	String autodelete = "autodelete";// sharedpreference key for setting to
 										// toggle autodelete
 	String maxChars = "maxChars";// sharedpreferences key for maxchar setting
+	String fileName = "fileName";// sharedpreferences key for filename
 	String currentLimitString = "Current Limit is:";
 
 	SeekBar charlimiterseekbar;
@@ -40,6 +43,8 @@ public class TaskListSharedPreferences {
 	SQLiteDatabase db;
 	MainActivity main;
 	ArrayList<String> itemsArrayList;
+
+	EditText filenameinputfield;
 
 	public TaskListSharedPreferences(Context context) {
 		this.context = context;
@@ -70,6 +75,25 @@ public class TaskListSharedPreferences {
 		Editor editAutoDelete = autoDeletesharedPreferences.edit();
 		editAutoDelete.putString(autodelete, "disabled");
 		editAutoDelete.commit();
+	}
+
+	// retrieved saved filename
+	public String retrieveTextFileName() {
+		textFileName = PreferenceManager.getDefaultSharedPreferences(context);
+		String textFileNameString = textFileName.getString(fileName,
+				"tasklistmanagerprotasks.txt");
+		return textFileNameString;
+	}
+
+	// save filename
+	public void savedTextFileName() {
+		String newFileName = filenameinputfield.getText().toString();
+		String extension = ".txt";
+		String fullFileName = newFileName + extension;
+		textFileName = PreferenceManager.getDefaultSharedPreferences(context);
+		Editor textFileNameEditor = textFileName.edit();
+		textFileNameEditor.putString(fileName, fullFileName);
+		textFileNameEditor.commit();
 	}
 
 	// retrieved saved maxChar setting
@@ -106,6 +130,8 @@ public class TaskListSharedPreferences {
 				.findViewById(R.id.currentlimit);
 		charlimiterseekbar = (SeekBar) preferences
 				.findViewById(R.id.charlimiterseekbar);
+		filenameinputfield = (EditText) preferences
+				.findViewById(R.id.filenameinputfield);
 
 		Button savepreferences = (Button) preferences
 				.findViewById(R.id.savepreferences);
@@ -120,6 +146,7 @@ public class TaskListSharedPreferences {
 
 			@Override
 			public void onClick(View v) {
+				savedTextFileName();
 				preferences.dismiss();
 
 			}

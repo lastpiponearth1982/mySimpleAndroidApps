@@ -46,6 +46,6 @@
 # view res/layout/abc_search_view.xml #generated:85
 -keep class android.support.v7.widget.SearchView$SearchAutoComplete { <init>(...); }
 
-# view AndroidManifest.xml #generated:16
+# view AndroidManifest.xml #generated:18
 -keep class com.productivity.tasklistmanagerpro.launcher.MainActivity { <init>(...); }
 

@@ -1,5 +1,19 @@
 package com.productivity.tasklistmanagerpro.launcher;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,12 +28,14 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.YuvImage;
 import android.os.Bundle;
+import android.os.Environment;
 import android.test.PerformanceTestCase;
 import android.text.Editable;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.util.Printer;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -132,6 +148,7 @@ public class MainActivity extends ListActivity {
 
 		appPreferences.retrieveMaxCharSettings();// retrieve maxchar settings
 													// from sharedpreferences
+		appPreferences.retrieveTextFileName();
 
 		itemsArrayList = new ArrayList<>();
 
@@ -933,6 +950,10 @@ public class MainActivity extends ListActivity {
 
 						viewHolder.texthere.setPaintFlags(viewHolder.texthere
 								.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+						viewHolder.texthere.setText(fromtexthere + doneString);
+						itemsArrayList.set(position, fromtexthere + doneString);
+
 						checkedItems++;
 						totalcheckeditemsTextView.setText(totalcheckedString
 								+ checkedItems);
@@ -940,6 +961,17 @@ public class MainActivity extends ListActivity {
 						doneButton.setEnabled(true);
 
 					} else {
+
+						String retrievedString = viewHolder.texthere.getText()
+								.toString();
+
+						if (retrievedString.contains(doneString)) {
+							String replacementString = retrievedString.replace(
+									doneString, "");
+							viewHolder.texthere.setText(replacementString);
+							itemsArrayList.set(position, replacementString);
+						}
+
 						viewHolder.texthere.setPaintFlags(viewHolder.texthere
 								.getPaintFlags()
 								& (~Paint.STRIKE_THRU_TEXT_FLAG));
@@ -984,6 +1016,8 @@ public class MainActivity extends ListActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.importtext, menu);
+		getMenuInflater().inflate(R.menu.export, menu);
 		getMenuInflater().inflate(R.menu.preferences, menu);
 		getMenuInflater().inflate(R.menu.help, menu);
 		getMenuInflater().inflate(R.menu.exit, menu);
@@ -996,7 +1030,21 @@ public class MainActivity extends ListActivity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-
+		if (id == R.id.importtextfile) {
+			try {
+				return importTextFile();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		if (id == R.id.export) {
+			try {
+				return exportToTextFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 		if (id == R.id.help) {
 			return optionsMenu.optionsHelp();
 		}
@@ -1009,6 +1057,60 @@ public class MainActivity extends ListActivity {
 		}
 
 		return super.onOptionsItemSelected(item);
+	}
+
+	private boolean importTextFile() throws IOException {
+		// fix the logic here
+		// String filename = appPreferences.retrieveTextFileName();
+		// String path = "/sdcard/";
+		// // File file = new File("/sdcard/tasklistmanagerprotasks.txt");
+		// File file = new File(path + filename);
+		// BufferedReader reader = new BufferedReader(new FileReader(file));
+		// BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+		//
+		// String readit = null;
+		// int index = 0;
+		// while ((readit = reader.readLine()) != null) {
+		// itemsArrayList.add(index, readit);
+		// writer.write(itemsArrayList.get(index) + "\r\n");
+		//
+		// adapter.notifyDataSetChanged();
+		// index++;
+		//
+		// ContentValues values = new ContentValues();
+		// values.put(helper.KEY_TASKNAME, readit);
+		// values.put(DBHelper.KEY_TASKFLAG, 0);
+		// db.insert(helper.TABLENAME, null, values);
+		// }
+		// reader.close();
+		Toast.makeText(this, "Import function not yet implemented",
+				Toast.LENGTH_SHORT).show();
+		return true;
+	}
+
+	public boolean exportToTextFile() throws IOException {
+		String filename = appPreferences.retrieveTextFileName();
+		String path = "/sdcard/";
+		File file = new File(path + filename);
+		file.createNewFile();
+
+		try {
+			BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+
+			for (int i = 0; i < itemsArrayList.size(); i++) {
+				writer.write(itemsArrayList.get(i) + "\r\n");
+			}
+
+			writer.close();
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+
+		}
+		Toast.makeText(this, "File " + filename + " successfully exported.",
+				Toast.LENGTH_SHORT).show();
+		return true;
+
 	}
 
 	public boolean exitApp() {

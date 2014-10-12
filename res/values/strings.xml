@@ -21,5 +21,9 @@
     <string name="overwrite">Overwrite</string>
     <string name="add">Add</string>
     <string name="drag_the_seekbar_on_the_right_to_change_the_maximum_number_of_characters_to_be_displayed_">Drag the seekbar on the right to change the maximum number of characters to be displayed.</string>
+    <string name="export">export</string>
+    <string name="import_text_file">Import Text File</string>
+    <string name="export_text_file">Export Text File</string>
+    <string name="name_of_text_file_to_import_and_export_enter_the_name_of_the_filename_that_will_be_exported_from_the_app_the_same_will_be_used_to_import_a_prepared_text_file_containing_tasks_to_populate_the_listview_">Name of text file to import and Export. Enter the name of the filename that will be exported from the app. The same will be used to import a prepared text file containing tasks to populate the listview.</string>
 
 </resources>

@@ -7,7 +7,7 @@
         android:id="@+id/help"
         android:checked="true"
         android:icon="@android:drawable/ic_menu_help"
-        android:orderInCategory="30"
+        android:orderInCategory="10"
         android:title="@string/help"
         app:showAsAction="always"/>
 

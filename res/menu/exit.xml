@@ -6,7 +6,7 @@
     <item
         android:id="@+id/exit"
         android:checked="true"
-        android:orderInCategory="90"
+        android:orderInCategory="50"
         android:title="@string/exit"
         app:showAsAction="always"/>
 
