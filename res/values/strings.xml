@@ -26,5 +26,7 @@
     <string name="export_text_file">Export Text File</string>
     <string name="name_of_text_file_to_import_and_export_enter_the_name_of_the_filename_that_will_be_exported_from_the_app_the_same_will_be_used_to_import_a_prepared_text_file_containing_tasks_to_populate_the_listview_">Name of text file to import and Export. Enter the name of the filename that will be exported from the app. The same will be used to import a prepared text file containing tasks to populate the listview.</string>
     <string name="filename_for_exportimport">Enter name of file for import or export. Default is tasklistmanagerprotasks.</string>
+    <string name="export_csv_file">Export CSV File</string>
+    <string name="import_csv_file">Import CSV File</string>
 
 </resources>

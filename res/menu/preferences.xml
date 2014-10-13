@@ -7,7 +7,7 @@
         android:id="@+id/preferences"
         android:checked="true"
         android:icon="@android:drawable/ic_menu_help"
-        android:orderInCategory="40"
+        android:orderInCategory="60"
         android:title="@string/preferences"
         app:showAsAction="always"/>
 

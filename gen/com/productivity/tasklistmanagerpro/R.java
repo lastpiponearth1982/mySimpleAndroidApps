@@ -1117,16 +1117,18 @@ containing a value of this type.
         public static final int exit=0x7f05005f;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002d;
-        public static final int export=0x7f050060;
+        public static final int exportcsvfile=0x7f050060;
+        public static final int exporttextfile=0x7f050061;
         public static final int filenameinputfield=0x7f05005a;
-        public static final int help=0x7f050061;
+        public static final int help=0x7f050062;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f05002b;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
         public static final int imageName=0x7f050029;
-        public static final int importtextfile=0x7f050062;
+        public static final int importcsvfile=0x7f050063;
+        public static final int importtextfile=0x7f050064;
         public static final int inputfield=0x7f050048;
         public static final int inputfieldgroup=0x7f050046;
         public static final int itemcountgroup=0x7f050040;
@@ -1140,7 +1142,7 @@ containing a value of this type.
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
         public static final int overwrite=0x7f05004b;
-        public static final int preferences=0x7f050063;
+        public static final int preferences=0x7f050065;
         public static final int preferencestext=0x7f050053;
         public static final int priorityspinner=0x7f050047;
         public static final int progress_circular=0x7f050018;
@@ -1238,10 +1240,12 @@ containing a value of this type.
     }
     public static final class menu {
         public static final int exit=0x7f0c0000;
-        public static final int export=0x7f0c0001;
-        public static final int help=0x7f0c0002;
-        public static final int importtext=0x7f0c0003;
-        public static final int preferences=0x7f0c0004;
+        public static final int exportcsvfile=0x7f0c0001;
+        public static final int exporttextfile=0x7f0c0002;
+        public static final int help=0x7f0c0003;
+        public static final int importcsvfile=0x7f0c0004;
+        public static final int importtextfile=0x7f0c0005;
+        public static final int preferences=0x7f0c0006;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1295,9 +1299,11 @@ containing a value of this type.
         public static final int enter_task_details_here_click_add_to_add_to_list_=0x7f0a001a;
         public static final int exit=0x7f0a000f;
         public static final int export=0x7f0a0021;
+        public static final int export_csv_file=0x7f0a0026;
         public static final int export_text_file=0x7f0a0023;
         public static final int filename_for_exportimport=0x7f0a0025;
         public static final int help=0x7f0a0010;
+        public static final int import_csv_file=0x7f0a0027;
         public static final int import_text_file=0x7f0a0022;
         public static final int name_of_text_file_to_import_and_export_enter_the_name_of_the_filename_that_will_be_exported_from_the_app_the_same_will_be_used_to_import_a_prepared_text_file_containing_tasks_to_populate_the_listview_=0x7f0a0024;
         public static final int overwrite=0x7f0a001e;

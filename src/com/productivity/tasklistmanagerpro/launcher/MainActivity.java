@@ -3,17 +3,10 @@ package com.productivity.tasklistmanagerpro.launcher;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.LineNumberReader;
-import java.io.OutputStreamWriter;
-import java.io.PrintStream;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,16 +19,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.YuvImage;
 import android.os.Bundle;
-import android.os.Environment;
-import android.test.PerformanceTestCase;
 import android.text.Editable;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.util.Printer;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -1016,8 +1005,10 @@ public class MainActivity extends ListActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.importtext, menu);
-		getMenuInflater().inflate(R.menu.export, menu);
+		getMenuInflater().inflate(R.menu.importtextfile, menu);
+		getMenuInflater().inflate(R.menu.importcsvfile, menu);
+		getMenuInflater().inflate(R.menu.exporttextfile, menu);
+		getMenuInflater().inflate(R.menu.exportcsvfile, menu);
 		getMenuInflater().inflate(R.menu.preferences, menu);
 		getMenuInflater().inflate(R.menu.help, menu);
 		getMenuInflater().inflate(R.menu.exit, menu);
@@ -1038,19 +1029,36 @@ public class MainActivity extends ListActivity {
 				e.printStackTrace();
 			}
 		}
-		if (id == R.id.export) {
+		if (id == R.id.importcsvfile) {
+			try {
+				return importCSVFile();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		if (id == R.id.exporttextfile) {
 			try {
 				return exportToTextFile();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		}
-		if (id == R.id.help) {
-			return optionsMenu.optionsHelp();
+		if (id == R.id.exportcsvfile) {
+			try {
+				return exportToCSVFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
+
 		if (id == R.id.preferences) {
 
 			return appPreferences.appPreferencesDialog();
+		}
+		if (id == R.id.help) {
+			return optionsMenu.optionsHelp();
 		}
 		if (id == R.id.exit) {
 			return exitApp();
@@ -1098,16 +1106,85 @@ public class MainActivity extends ListActivity {
 			BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 
 			for (int i = 0; i < itemsArrayList.size(); i++) {
+
 				writer.write(itemsArrayList.get(i) + "\r\n");
 			}
-
+			writer.flush();
 			writer.close();
+
 		} catch (FileNotFoundException e) {
 
 			e.printStackTrace();
 
 		}
 		Toast.makeText(this, "File " + filename + " successfully exported.",
+				Toast.LENGTH_SHORT).show();
+		return true;
+
+	}
+
+	private boolean importCSVFile() throws IOException {
+
+		String filename = appPreferences.retrieveTextFileName();
+		String filenameCSV = filename.replace(".txt", ".csv");
+		String path = "/sdcard/";
+		File file = new File(path + filename);
+		BufferedReader reader = new BufferedReader(new FileReader(file));
+
+		String replace;
+		String readit = null;
+		int index = 0;
+		while ((readit = reader.readLine()) != null) {
+			replace = readit.replaceAll(",", "");
+			itemsArrayList.add(index, replace);
+
+			adapter.notifyDataSetChanged();
+			updateItemCount();
+			index++;
+
+			ContentValues values = new ContentValues();
+			values.put(helper.KEY_TASKNAME, readit);
+			values.put(DBHelper.KEY_TASKFLAG, 0);
+			db.insert(helper.TABLENAME, null, values);
+		}
+		reader.close();
+		deleteButton.setEnabled(true);
+		Toast.makeText(this, "File " + filenameCSV + " succesfully imported.",
+				Toast.LENGTH_SHORT).show();
+		return true;
+	}
+
+	public boolean exportToCSVFile() throws IOException {
+		String filename = appPreferences.retrieveTextFileName();
+		String filenameCSV = filename.replace(".txt", ".csv");
+		String path = "/sdcard/";
+		File file = new File(path + filenameCSV);
+		file.createNewFile();
+
+		try {
+			BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+
+			for (int i = 0; i < itemsArrayList.size(); i++) {
+				String[] fullString = itemsArrayList.get(i).split(":");
+				String priority = fullString[0];
+				String separator = ": ";
+				String taskDetail = fullString[1];
+				writer.append(priority);
+				writer.append(separator);
+				writer.append(',');
+				writer.append(taskDetail);
+				writer.append("\r\n");
+
+			}
+			writer.flush();
+			writer.close();
+
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+
+		}
+		Toast.makeText(this, "File " + filenameCSV + " successfully exported.",
 				Toast.LENGTH_SHORT).show();
 		return true;
 
