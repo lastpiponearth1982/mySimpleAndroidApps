@@ -57,15 +57,7 @@
     <LinearLayout
         android:id="@+id/tempgroup"
         android:layout_width="match_parent"
-        android:layout_height="400dp" >
-
-        <TextView
-            android:id="@+id/filnameinfo"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:text="@string/name_of_text_file_to_import_and_export_enter_the_name_of_the_filename_that_will_be_exported_from_the_app_the_same_will_be_used_to_import_a_prepared_text_file_containing_tasks_to_populate_the_listview_"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:layout_height="100dp" >
 
         <EditText
             android:id="@+id/filenameinputfield"
@@ -73,24 +65,39 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:ems="10"
+            android:hint="@string/filename_for_exportimport"
             android:inputType="textMultiLine" >
 
             <requestFocus />
         </EditText>
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/nameofFile"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Current name of file is:"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
     <LinearLayout
         android:id="@+id/saveandexitgroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
-        android:layout_marginRight="200dp" >
+        android:orientation="horizontal" >
 
         <Button
             android:id="@+id/savepreferences"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="@string/save_and_exit" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Cancel" />
     </LinearLayout>
 
 </LinearLayout>

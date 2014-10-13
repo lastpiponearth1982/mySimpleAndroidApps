@@ -1060,30 +1060,28 @@ public class MainActivity extends ListActivity {
 	}
 
 	private boolean importTextFile() throws IOException {
-		// fix the logic here
-		// String filename = appPreferences.retrieveTextFileName();
-		// String path = "/sdcard/";
-		// // File file = new File("/sdcard/tasklistmanagerprotasks.txt");
-		// File file = new File(path + filename);
-		// BufferedReader reader = new BufferedReader(new FileReader(file));
-		// BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-		//
-		// String readit = null;
-		// int index = 0;
-		// while ((readit = reader.readLine()) != null) {
-		// itemsArrayList.add(index, readit);
-		// writer.write(itemsArrayList.get(index) + "\r\n");
-		//
-		// adapter.notifyDataSetChanged();
-		// index++;
-		//
-		// ContentValues values = new ContentValues();
-		// values.put(helper.KEY_TASKNAME, readit);
-		// values.put(DBHelper.KEY_TASKFLAG, 0);
-		// db.insert(helper.TABLENAME, null, values);
-		// }
-		// reader.close();
-		Toast.makeText(this, "Import function not yet implemented",
+
+		String filename = appPreferences.retrieveTextFileName();
+		String path = "/sdcard/";
+		// File file = new File("/sdcard/tasklistmanagerprotasks.txt");
+		File file = new File(path + filename);
+		BufferedReader reader = new BufferedReader(new FileReader(file));
+
+		String readit = null;
+		int index = 0;
+		while ((readit = reader.readLine()) != null) {
+			itemsArrayList.add(index, readit);
+
+			adapter.notifyDataSetChanged();
+			index++;
+
+			ContentValues values = new ContentValues();
+			values.put(helper.KEY_TASKNAME, readit);
+			values.put(DBHelper.KEY_TASKFLAG, 0);
+			db.insert(helper.TABLENAME, null, values);
+		}
+		reader.close();
+		Toast.makeText(this, "File " + filename + " succesfully imported.",
 				Toast.LENGTH_SHORT).show();
 		return true;
 	}

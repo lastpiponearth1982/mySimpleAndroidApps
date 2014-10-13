@@ -35,9 +35,11 @@ public class TaskListSharedPreferences {
 	String currentLimitString = "Current Limit is:";
 
 	SeekBar charlimiterseekbar;
-	TextView currentLimitTextView;
+	TextView currentLimitTextView, nameofFile;
 	int currentprogressposition;
 	int maxCharSharePrefsInt;
+	String currentFileName;
+	String fileNameInputFieldInfo = "Current name of file is:";
 
 	Context context;
 	SQLiteDatabase db;
@@ -82,6 +84,8 @@ public class TaskListSharedPreferences {
 		textFileName = PreferenceManager.getDefaultSharedPreferences(context);
 		String textFileNameString = textFileName.getString(fileName,
 				"tasklistmanagerprotasks.txt");
+		Toast.makeText(context, "Filename for export is " + textFileNameString,
+				Toast.LENGTH_SHORT).show();
 		return textFileNameString;
 	}
 
@@ -94,6 +98,7 @@ public class TaskListSharedPreferences {
 		Editor textFileNameEditor = textFileName.edit();
 		textFileNameEditor.putString(fileName, fullFileName);
 		textFileNameEditor.commit();
+
 	}
 
 	// retrieved saved maxChar setting
@@ -132,9 +137,13 @@ public class TaskListSharedPreferences {
 				.findViewById(R.id.charlimiterseekbar);
 		filenameinputfield = (EditText) preferences
 				.findViewById(R.id.filenameinputfield);
+		nameofFile = (TextView) preferences.findViewById(R.id.nameofFile);
+		currentFileName = retrieveTextFileName();
+		nameofFile.setText(fileNameInputFieldInfo + currentFileName);
 
 		Button savepreferences = (Button) preferences
 				.findViewById(R.id.savepreferences);
+		Button cancel = (Button) preferences.findViewById(R.id.cancel);
 
 		if (retrieveSharedPrefsforAutoDelete().contains("enabled")) {
 			enabledisable.setChecked(true);
@@ -147,10 +156,22 @@ public class TaskListSharedPreferences {
 			@Override
 			public void onClick(View v) {
 				savedTextFileName();
+				nameofFile.setText(fileNameInputFieldInfo + currentFileName);
 				preferences.dismiss();
-
 			}
 		};
+
+		// listener for cancel and don't do any changes
+		OnClickListener cancelchanges = new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				preferences.dismiss();
+				Toast.makeText(context, "No changes have been made",
+						Toast.LENGTH_SHORT).show();
+			}
+		};
+
 		// checkchangedlistener for enable/disable of autodelete function
 		OnCheckedChangeListener toggle = new OnCheckedChangeListener() {
 
@@ -196,7 +217,7 @@ public class TaskListSharedPreferences {
 		int maxCharSharePrefsInt = maxCharLimitSharedPrefs.getInt(maxChars, 40);
 		charlimiterseekbar.setProgress(maxCharSharePrefsInt);
 		savepreferences.setOnClickListener(saveandexit);
-
+		cancel.setOnClickListener(cancelchanges);
 		preferences.show();
 		return true;
 	}

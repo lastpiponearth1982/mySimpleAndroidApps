@@ -8229,7 +8229,9 @@ com.productivity.tasklistmanagerpro.launcher.MainActivity -> com.productivity.ta
     void transferCursorDataToArrayList(android.database.Cursor) -> a
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-    boolean exitApp() -> f
+    boolean importTextFile() -> h
+    boolean exportToTextFile() -> f
+    boolean exitApp() -> g
     java.lang.String access$0(com.productivity.tasklistmanagerpro.launcher.MainActivity) -> a
 com.productivity.tasklistmanagerpro.launcher.MainActivity$1 -> com.productivity.tasklistmanagerpro.launcher.a:
     com.productivity.tasklistmanagerpro.launcher.MainActivity this$0 -> a
@@ -8315,6 +8317,7 @@ com.productivity.tasklistmanagerpro.launcher.MainActivity$MyAdapter$1 -> com.pro
     java.lang.String flagged -> b
     com.productivity.tasklistmanagerpro.launcher.MainActivity$MyAdapter this$1 -> c
     com.productivity.tasklistmanagerpro.launcher.MainActivity$ViewHolder val$viewHolder -> d
+    int val$position -> e
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
 com.productivity.tasklistmanagerpro.launcher.MainActivity$MyAdapter$2 -> com.productivity.tasklistmanagerpro.launcher.x:
     com.productivity.tasklistmanagerpro.launcher.MainActivity$MyAdapter this$1 -> a
@@ -8335,19 +8338,24 @@ com.productivity.tasklistmanagerpro.preferences.OptionsMenu$1 -> com.productivit
 com.productivity.tasklistmanagerpro.preferences.TaskListSharedPreferences -> com.productivity.tasklistmanagerpro.b.c:
     android.content.SharedPreferences autoDeletesharedPreferences -> a
     android.content.SharedPreferences maxCharLimitSharedPrefs -> b
-    java.lang.String autodelete -> c
-    java.lang.String maxChars -> d
-    java.lang.String currentLimitString -> e
-    android.widget.SeekBar charlimiterseekbar -> f
-    android.widget.TextView currentLimitTextView -> g
-    int currentprogressposition -> h
-    android.content.Context context -> i
+    android.content.SharedPreferences textFileName -> c
+    java.lang.String autodelete -> d
+    java.lang.String maxChars -> e
+    java.lang.String fileName -> f
+    java.lang.String currentLimitString -> g
+    android.widget.SeekBar charlimiterseekbar -> h
+    android.widget.TextView currentLimitTextView -> i
+    int currentprogressposition -> j
+    android.content.Context context -> k
+    android.widget.EditText filenameinputfield -> l
     java.lang.String retrieveSharedPrefsforAutoDelete() -> a
     void saveAutoDeleteSettingtoEnable() -> b
     void saveAutoDeleteSettingtoDisable() -> c
-    int retrieveMaxCharSettings() -> d
-    void savedMaxCharSettings() -> e
-    boolean appPreferencesDialog() -> f
+    java.lang.String retrieveTextFileName() -> d
+    void savedTextFileName() -> e
+    int retrieveMaxCharSettings() -> f
+    void savedMaxCharSettings() -> g
+    boolean appPreferencesDialog() -> h
 com.productivity.tasklistmanagerpro.preferences.TaskListSharedPreferences$1 -> com.productivity.tasklistmanagerpro.b.d:
     com.productivity.tasklistmanagerpro.preferences.TaskListSharedPreferences this$0 -> a
     android.app.Dialog val$preferences -> b

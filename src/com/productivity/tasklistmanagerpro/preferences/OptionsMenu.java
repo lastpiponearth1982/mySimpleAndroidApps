@@ -38,8 +38,11 @@ public class OptionsMenu {
 			+ "12. You can delete marked/checked items by clicking Delete Done. This button is disabled by default "
 			+ "but is enabled when there is at least 1 marked/checked item. A confirmation dialog will open before any action is done. \n"
 			+ "13. To delete all items, click Delete All. A confirmation dialog will open to confirm the action. \n"
-			+ "14. To export tasks to text file, go to upper right and select Export Text File. The exported text file can be found in your SD card. \n"
-			+ "15. To exit the application, click Exit on the ActionBar options menu at top right corner. A confirmation dialog will appear to confirm exit. "
+			+ "14. You can import text files containing tasks. The app will immediately recognize it as a task entry as long as it has the tags 'Low: ', 'Medium: ' , and 'High:'. "
+			+ "Otherwise, you can simply import it and edit changes to the correct format. \n"
+			+ "15. To export tasks to text file, go to upper right and select Export Text File. The exported text file can be found in the default location of your SD card. \n"
+			+ "16. Note that when performing import or export of tasks via text file, the filename should be specified in the preferences menu otherwise the default filename will be used. \n"
+			+ "17. To exit the application, click Exit on the ActionBar options menu at top right corner. A confirmation dialog will appear to confirm exit. "
 			+ "By default all marked/checked items are not deleted on Exit. This can be enabled in the options menu located in the ActionBar at the top right. \n";
 
 	Context context;
