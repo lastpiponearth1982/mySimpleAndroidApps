@@ -8345,9 +8345,12 @@ com.productivity.tasklistmanagerpro.preferences.TaskListSharedPreferences -> com
     java.lang.String currentLimitString -> g
     android.widget.SeekBar charlimiterseekbar -> h
     android.widget.TextView currentLimitTextView -> i
-    int currentprogressposition -> j
-    android.content.Context context -> k
-    android.widget.EditText filenameinputfield -> l
+    android.widget.TextView nameofFile -> j
+    int currentprogressposition -> k
+    java.lang.String currentFileName -> l
+    java.lang.String fileNameInputFieldInfo -> m
+    android.content.Context context -> n
+    android.widget.EditText filenameinputfield -> o
     java.lang.String retrieveSharedPrefsforAutoDelete() -> a
     void saveAutoDeleteSettingtoEnable() -> b
     void saveAutoDeleteSettingtoDisable() -> c
@@ -8362,8 +8365,12 @@ com.productivity.tasklistmanagerpro.preferences.TaskListSharedPreferences$1 -> c
     void onClick(android.view.View) -> onClick
 com.productivity.tasklistmanagerpro.preferences.TaskListSharedPreferences$2 -> com.productivity.tasklistmanagerpro.b.e:
     com.productivity.tasklistmanagerpro.preferences.TaskListSharedPreferences this$0 -> a
-    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+    android.app.Dialog val$preferences -> b
+    void onClick(android.view.View) -> onClick
 com.productivity.tasklistmanagerpro.preferences.TaskListSharedPreferences$3 -> com.productivity.tasklistmanagerpro.b.f:
+    com.productivity.tasklistmanagerpro.preferences.TaskListSharedPreferences this$0 -> a
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.productivity.tasklistmanagerpro.preferences.TaskListSharedPreferences$4 -> com.productivity.tasklistmanagerpro.b.g:
     com.productivity.tasklistmanagerpro.preferences.TaskListSharedPreferences this$0 -> a
     void onStopTrackingTouch(android.widget.SeekBar) -> onStopTrackingTouch
     void onStartTrackingTouch(android.widget.SeekBar) -> onStartTrackingTouch

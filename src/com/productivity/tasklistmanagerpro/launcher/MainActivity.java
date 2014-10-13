@@ -1073,6 +1073,7 @@ public class MainActivity extends ListActivity {
 			itemsArrayList.add(index, readit);
 
 			adapter.notifyDataSetChanged();
+			updateItemCount();
 			index++;
 
 			ContentValues values = new ContentValues();
@@ -1081,6 +1082,7 @@ public class MainActivity extends ListActivity {
 			db.insert(helper.TABLENAME, null, values);
 		}
 		reader.close();
+		deleteButton.setEnabled(true);
 		Toast.makeText(this, "File " + filename + " succesfully imported.",
 				Toast.LENGTH_SHORT).show();
 		return true;

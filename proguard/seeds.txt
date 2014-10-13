@@ -7899,6 +7899,7 @@ com.productivity.tasklistmanagerpro.R$id: int always
 com.productivity.tasklistmanagerpro.R$id: int appname
 com.productivity.tasklistmanagerpro.R$id: int beginning
 com.productivity.tasklistmanagerpro.R$id: int buttons
+com.productivity.tasklistmanagerpro.R$id: int cancel
 com.productivity.tasklistmanagerpro.R$id: int charlimiterseekbar
 com.productivity.tasklistmanagerpro.R$id: int charlimitinfo
 com.productivity.tasklistmanagerpro.R$id: int checkbox
@@ -7920,7 +7921,6 @@ com.productivity.tasklistmanagerpro.R$id: int expand_activities_button
 com.productivity.tasklistmanagerpro.R$id: int expanded_menu
 com.productivity.tasklistmanagerpro.R$id: int export
 com.productivity.tasklistmanagerpro.R$id: int filenameinputfield
-com.productivity.tasklistmanagerpro.R$id: int filnameinfo
 com.productivity.tasklistmanagerpro.R$id: int help
 com.productivity.tasklistmanagerpro.R$id: int home
 com.productivity.tasklistmanagerpro.R$id: int homeAsUp
@@ -7937,6 +7937,7 @@ com.productivity.tasklistmanagerpro.R$id: int listMode
 com.productivity.tasklistmanagerpro.R$id: int list_item
 com.productivity.tasklistmanagerpro.R$id: int maxchargroup
 com.productivity.tasklistmanagerpro.R$id: int middle
+com.productivity.tasklistmanagerpro.R$id: int nameofFile
 com.productivity.tasklistmanagerpro.R$id: int never
 com.productivity.tasklistmanagerpro.R$id: int none
 com.productivity.tasklistmanagerpro.R$id: int normal
@@ -8040,6 +8041,7 @@ com.productivity.tasklistmanagerpro.R$string: int enter_task_details_here_click_
 com.productivity.tasklistmanagerpro.R$string: int exit
 com.productivity.tasklistmanagerpro.R$string: int export
 com.productivity.tasklistmanagerpro.R$string: int export_text_file
+com.productivity.tasklistmanagerpro.R$string: int filename_for_exportimport
 com.productivity.tasklistmanagerpro.R$string: int help
 com.productivity.tasklistmanagerpro.R$string: int import_text_file
 com.productivity.tasklistmanagerpro.R$string: int name_of_text_file_to_import_and_export_enter_the_name_of_the_filename_that_will_be_exported_from_the_app_the_same_will_be_used_to_import_a_prepared_text_file_containing_tasks_to_populate_the_listview_
