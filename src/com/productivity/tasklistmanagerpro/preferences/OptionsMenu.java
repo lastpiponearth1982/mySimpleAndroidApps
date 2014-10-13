@@ -7,7 +7,8 @@ import android.content.DialogInterface;
 public class OptionsMenu {
 
 	// this long text is the text displayed when pressing the help options menu
-	String helpString = "1. This help menu can be accessed from the top right corner. \n"
+	String helpString = 
+			"1. This help menu can be accessed from the top right corner. \n"
 			+ "2. To add an item, click on the Add button after entering text in the inputfield. "
 			+ "Do not remove the priority tags as it disables adding entries. \n"
 			+ "3. There are three priority settings that can be set for any task. "
