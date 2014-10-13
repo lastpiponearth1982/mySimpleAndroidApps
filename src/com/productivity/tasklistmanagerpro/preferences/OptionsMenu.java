@@ -43,7 +43,7 @@ public class OptionsMenu {
 			+ "Otherwise, you can simply import it and edit changes to the correct format. You can also import CSV files but they also have to have the tags.\n"
 			+ "15. To export tasks to text or CSV file, go to upper right and select Export Text File or Export CSV file. The exported file can be found in the default location of your SD card. \n"
 			+ "16. Note that when performing import or export of tasks via text or CSV file, the filename should be specified in the preferences menu otherwise the default filename will be used. \n"
-			+ "17. After a text or CSV file has been imported, they can be exported to the same file. This feature is handy after importing a file and then performing changes such as adding"
+			+ "17. After a text or CSV file has been imported, they can be exported to the same file. This feature is handy after importing a file and then performing changes such as adding "
 			+ "or removing items to the list before exporting them to text or CSV. \n"
 			+ "18. To exit the application, click Exit on the ActionBar options menu at top right corner. A confirmation dialog will appear to confirm exit. "
 			+ "By default all marked/checked items are not deleted on Exit. This can be enabled in the options menu located in the ActionBar at the top right. \n";
