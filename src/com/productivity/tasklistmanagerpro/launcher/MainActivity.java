@@ -61,11 +61,28 @@ public class MainActivity extends ListActivity {
 	 * by a cursor.
 	 */
 
-	/* CHANGELOG VER. 1.1: */
-	/*
-	 * 1.Added inputfield filter for preventing sql statements being sent
-	 * 2.Added done funcationality button to item detail dialog
-	 */
+	// ***NOTE: This app is only in English version.***
+	//
+	// ***VERSION 1.1 ChangeLog***
+	//
+	// 1. Added "Mark as Done" dialog button on item details that exceed
+	// pre-defined character limit.
+	// 2. Added input filter to prevent sql statement from being sent to app
+	// database.
+	//
+	// ***VERSION 1.2 ChangeLog***
+	//
+	// 1. Export saved tasks into text file for viewing in larger screens.
+	// 2. customize name of file to import/export
+	// 3. Import function to be implemented in next release
+	//
+	// ***VERSION 1.3 ChangeLog**
+	//
+	// 1. Successfully implemented import function.
+	// 2. Made changes to preferences dialog UI.
+	// 3. Made changes and additions to help dialog.
+	//
+	// ***END VERSION ChangeLog***
 
 	// these classes instantiate the backend for this data centric app
 	DBHelper helper;// sqliteopenhelper class for creating and opening sqlite
