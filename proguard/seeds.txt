@@ -7919,7 +7919,8 @@ com.productivity.tasklistmanagerpro.R$id: int end
 com.productivity.tasklistmanagerpro.R$id: int exit
 com.productivity.tasklistmanagerpro.R$id: int expand_activities_button
 com.productivity.tasklistmanagerpro.R$id: int expanded_menu
-com.productivity.tasklistmanagerpro.R$id: int export
+com.productivity.tasklistmanagerpro.R$id: int exportcsvfile
+com.productivity.tasklistmanagerpro.R$id: int exporttextfile
 com.productivity.tasklistmanagerpro.R$id: int filenameinputfield
 com.productivity.tasklistmanagerpro.R$id: int help
 com.productivity.tasklistmanagerpro.R$id: int home
@@ -7928,6 +7929,7 @@ com.productivity.tasklistmanagerpro.R$id: int icon
 com.productivity.tasklistmanagerpro.R$id: int ifRoom
 com.productivity.tasklistmanagerpro.R$id: int image
 com.productivity.tasklistmanagerpro.R$id: int imageName
+com.productivity.tasklistmanagerpro.R$id: int importcsvfile
 com.productivity.tasklistmanagerpro.R$id: int importtextfile
 com.productivity.tasklistmanagerpro.R$id: int inputfield
 com.productivity.tasklistmanagerpro.R$id: int inputfieldgroup
@@ -8012,9 +8014,11 @@ com.productivity.tasklistmanagerpro.R$layout: int item
 com.productivity.tasklistmanagerpro.R$layout: int preferencesdialog
 com.productivity.tasklistmanagerpro.R$layout: int support_simple_spinner_dropdown_item
 com.productivity.tasklistmanagerpro.R$menu: int exit
-com.productivity.tasklistmanagerpro.R$menu: int export
+com.productivity.tasklistmanagerpro.R$menu: int exportcsvfile
+com.productivity.tasklistmanagerpro.R$menu: int exporttextfile
 com.productivity.tasklistmanagerpro.R$menu: int help
-com.productivity.tasklistmanagerpro.R$menu: int importtext
+com.productivity.tasklistmanagerpro.R$menu: int importcsvfile
+com.productivity.tasklistmanagerpro.R$menu: int importtextfile
 com.productivity.tasklistmanagerpro.R$menu: int preferences
 com.productivity.tasklistmanagerpro.R$string: int abc_action_bar_home_description
 com.productivity.tasklistmanagerpro.R$string: int abc_action_bar_up_description
@@ -8040,9 +8044,11 @@ com.productivity.tasklistmanagerpro.R$string: int enable_auto_delete_this_option
 com.productivity.tasklistmanagerpro.R$string: int enter_task_details_here_click_add_to_add_to_list_
 com.productivity.tasklistmanagerpro.R$string: int exit
 com.productivity.tasklistmanagerpro.R$string: int export
+com.productivity.tasklistmanagerpro.R$string: int export_csv_file
 com.productivity.tasklistmanagerpro.R$string: int export_text_file
 com.productivity.tasklistmanagerpro.R$string: int filename_for_exportimport
 com.productivity.tasklistmanagerpro.R$string: int help
+com.productivity.tasklistmanagerpro.R$string: int import_csv_file
 com.productivity.tasklistmanagerpro.R$string: int import_text_file
 com.productivity.tasklistmanagerpro.R$string: int name_of_text_file_to_import_and_export_enter_the_name_of_the_filename_that_will_be_exported_from_the_app_the_same_will_be_used_to_import_a_prepared_text_file_containing_tasks_to_populate_the_listview_
 com.productivity.tasklistmanagerpro.R$string: int overwrite

@@ -8229,9 +8229,11 @@ com.productivity.tasklistmanagerpro.launcher.MainActivity -> com.productivity.ta
     void transferCursorDataToArrayList(android.database.Cursor) -> a
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-    boolean importTextFile() -> h
+    boolean importTextFile() -> i
     boolean exportToTextFile() -> f
-    boolean exitApp() -> g
+    boolean importCSVFile() -> j
+    boolean exportToCSVFile() -> g
+    boolean exitApp() -> h
     java.lang.String access$0(com.productivity.tasklistmanagerpro.launcher.MainActivity) -> a
 com.productivity.tasklistmanagerpro.launcher.MainActivity$1 -> com.productivity.tasklistmanagerpro.launcher.a:
     com.productivity.tasklistmanagerpro.launcher.MainActivity this$0 -> a
