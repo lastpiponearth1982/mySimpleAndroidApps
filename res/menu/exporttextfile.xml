@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.testapp.MainActivity" >
+
+    <item
+        android:id="@+id/exporttextfile"
+        android:checked="true"
+        android:orderInCategory="40"
+        android:title="@string/export_text_file"
+        app:showAsAction="always"/>
+
+</menu>
