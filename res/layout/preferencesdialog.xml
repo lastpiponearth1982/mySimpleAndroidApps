@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0F8FF"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -22,7 +23,7 @@
             android:id="@+id/enabledisable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="" />
+            android:text="" android:background="#FFF"/>
     </LinearLayout>
 
     <LinearLayout
@@ -51,13 +52,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:max="200" />
+            android:max="200" android:background="#FFF"/>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/tempgroup"
         android:layout_width="match_parent"
-        android:layout_height="100dp" >
+        android:layout_height="wrap_content" >
 
         <EditText
             android:id="@+id/filenameinputfield"
@@ -66,7 +67,7 @@
             android:layout_weight="2"
             android:ems="10"
             android:hint="@string/filename_for_exportimport"
-            android:inputType="textMultiLine" >
+            android:inputType="textMultiLine" android:background="#FFF">
 
             <requestFocus />
         </EditText>
@@ -75,7 +76,7 @@
     <TextView
         android:id="@+id/nameofFile"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="30dp"
         android:text="Current name of file is:"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -88,15 +89,15 @@
         <Button
             android:id="@+id/savepreferences"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/save_and_exit" />
 
         <Button
             android:id="@+id/cancel"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Cancel" />
     </LinearLayout>
 

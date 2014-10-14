@@ -8336,7 +8336,8 @@ com.productivity.tasklistmanagerpro.preferences.OptionsMenu -> com.productivity.
     boolean optionsHelp() -> a
 com.productivity.tasklistmanagerpro.preferences.OptionsMenu$1 -> com.productivity.tasklistmanagerpro.b.b:
     com.productivity.tasklistmanagerpro.preferences.OptionsMenu this$0 -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
+    android.app.Dialog val$apphelp -> b
+    void onClick(android.view.View) -> onClick
 com.productivity.tasklistmanagerpro.preferences.TaskListSharedPreferences -> com.productivity.tasklistmanagerpro.b.c:
     android.content.SharedPreferences autoDeletesharedPreferences -> a
     android.content.SharedPreferences maxCharLimitSharedPrefs -> b

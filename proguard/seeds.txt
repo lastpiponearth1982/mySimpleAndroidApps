@@ -7882,6 +7882,7 @@ com.productivity.tasklistmanagerpro.R$drawable: int abc_textfield_searchview_hol
 com.productivity.tasklistmanagerpro.R$drawable: int abc_textfield_searchview_right_holo_dark
 com.productivity.tasklistmanagerpro.R$drawable: int abc_textfield_searchview_right_holo_light
 com.productivity.tasklistmanagerpro.R$drawable: int ic_applauncher
+com.productivity.tasklistmanagerpro.R$id: int ExitHelp
 com.productivity.tasklistmanagerpro.R$id: int action_bar
 com.productivity.tasklistmanagerpro.R$id: int action_bar_activity_content
 com.productivity.tasklistmanagerpro.R$id: int action_bar_container
@@ -7923,6 +7924,8 @@ com.productivity.tasklistmanagerpro.R$id: int exportcsvfile
 com.productivity.tasklistmanagerpro.R$id: int exporttextfile
 com.productivity.tasklistmanagerpro.R$id: int filenameinputfield
 com.productivity.tasklistmanagerpro.R$id: int help
+com.productivity.tasklistmanagerpro.R$id: int helpitems
+com.productivity.tasklistmanagerpro.R$id: int helpscroll
 com.productivity.tasklistmanagerpro.R$id: int home
 com.productivity.tasklistmanagerpro.R$id: int homeAsUp
 com.productivity.tasklistmanagerpro.R$id: int icon
@@ -7943,6 +7946,7 @@ com.productivity.tasklistmanagerpro.R$id: int nameofFile
 com.productivity.tasklistmanagerpro.R$id: int never
 com.productivity.tasklistmanagerpro.R$id: int none
 com.productivity.tasklistmanagerpro.R$id: int normal
+com.productivity.tasklistmanagerpro.R$id: int okbutton
 com.productivity.tasklistmanagerpro.R$id: int overwrite
 com.productivity.tasklistmanagerpro.R$id: int preferences
 com.productivity.tasklistmanagerpro.R$id: int preferencestext
@@ -8010,6 +8014,7 @@ com.productivity.tasklistmanagerpro.R$layout: int abc_search_dropdown_item_icons
 com.productivity.tasklistmanagerpro.R$layout: int abc_search_view
 com.productivity.tasklistmanagerpro.R$layout: int abc_simple_decor
 com.productivity.tasklistmanagerpro.R$layout: int activity_main
+com.productivity.tasklistmanagerpro.R$layout: int help
 com.productivity.tasklistmanagerpro.R$layout: int item
 com.productivity.tasklistmanagerpro.R$layout: int preferencesdialog
 com.productivity.tasklistmanagerpro.R$layout: int support_simple_spinner_dropdown_item

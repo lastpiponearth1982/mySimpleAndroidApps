@@ -1,12 +1,19 @@
 package com.productivity.tasklistmanagerpro.preferences;
 
-import android.R;
-import android.app.AlertDialog;
+import com.productivity.tasklistmanagerpro.R;
+
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.res.Resources;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.webkit.WebView.FindListener;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class OptionsMenu {
+public class OptionsMenu extends DialogFragment {
 
 	// this long text is the text displayed when pressing the help options menu
 	String helpString = "1. This help menu can be accessed from the top right corner. \n"
@@ -56,19 +63,28 @@ public class OptionsMenu {
 	}
 
 	public boolean optionsHelp() {
-		AlertDialog.Builder apphelp = new AlertDialog.Builder(context);
-
+		final Dialog apphelp = new Dialog(context);
+		apphelp.setContentView(R.layout.help);
 		apphelp.setTitle("How to use the Application");
+		apphelp.setCancelable(false);
+		apphelp.setCanceledOnTouchOutside(false);
 
-		apphelp.setMessage(helpString).setCancelable(false)
-				.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int id) {
-						dialog.cancel();
-					}
-				});
+		TextView helpitems = (TextView) apphelp.findViewById(R.id.helpitems);
+		Button okbutton = (Button) apphelp.findViewById(R.id.okbutton);
+
+		helpitems.setText(helpString);
+
+		OnClickListener okunderstood = new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				apphelp.dismiss();
+			}
+		};
+
+		okbutton.setOnClickListener(okunderstood);
 
 		apphelp.show();
 		return true;
 	}
-
 }
