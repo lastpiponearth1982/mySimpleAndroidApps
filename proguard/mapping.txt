@@ -8197,27 +8197,30 @@ com.productivity.tasklistmanagerpro.launcher.MainActivity -> com.productivity.ta
     java.lang.String contentString -> h
     int itempositionInt -> i
     int checkedItems -> j
-    java.lang.String totaliteminlistString -> A
-    java.lang.String totalcheckedString -> B
-    java.lang.String totalhighString -> C
-    java.lang.String totalmediumString -> D
-    java.lang.String totallowString -> E
-    java.lang.String doneString -> k
-    android.widget.ListView list -> l
-    android.widget.EditText inputfield -> m
-    android.widget.TextView appnameTextView -> n
-    android.widget.TextView totalitemsTextView -> o
-    android.widget.TextView totalcheckeditemsTextView -> p
-    android.widget.TextView totalHighTextView -> q
-    android.widget.TextView totalMedTextView -> r
-    android.widget.TextView totalLowTextView -> s
-    android.widget.Button addButton -> t
-    android.widget.Button overwriteButton -> u
-    android.widget.Button clearButton -> v
-    android.widget.Button doneButton -> w
-    android.widget.Button deleteButton -> x
-    android.widget.Spinner priorityspinner -> y
-    com.productivity.tasklistmanagerpro.launcher.MainActivity$MyAdapter adapter -> z
+    java.util.Date date -> k
+    java.lang.String dateandtimeofexport -> l
+    java.lang.String exportedby -> m
+    java.lang.String totaliteminlistString -> D
+    java.lang.String totalcheckedString -> E
+    java.lang.String totalhighString -> F
+    java.lang.String totalmediumString -> G
+    java.lang.String totallowString -> H
+    java.lang.String doneString -> n
+    android.widget.ListView list -> o
+    android.widget.EditText inputfield -> p
+    android.widget.TextView appnameTextView -> q
+    android.widget.TextView totalitemsTextView -> r
+    android.widget.TextView totalcheckeditemsTextView -> s
+    android.widget.TextView totalHighTextView -> t
+    android.widget.TextView totalMedTextView -> u
+    android.widget.TextView totalLowTextView -> v
+    android.widget.Button addButton -> w
+    android.widget.Button overwriteButton -> x
+    android.widget.Button clearButton -> y
+    android.widget.Button doneButton -> z
+    android.widget.Button deleteButton -> A
+    android.widget.Spinner priorityspinner -> B
+    com.productivity.tasklistmanagerpro.launcher.MainActivity$MyAdapter adapter -> C
     void onCreate(android.os.Bundle) -> onCreate
     void onDestroy() -> onDestroy
     void getDatabase() -> a
