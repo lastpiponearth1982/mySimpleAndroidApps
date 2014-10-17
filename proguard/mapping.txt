@@ -8201,27 +8201,40 @@ com.productivity.tasklistmanagerpro.launcher.MainActivity -> com.productivity.ta
     java.lang.String dateandtimeofexport -> l
     java.lang.String exportedbyCSV -> m
     java.lang.String exportedbyTXT -> n
-    java.lang.String totaliteminlistString -> E
-    java.lang.String totalcheckedString -> F
-    java.lang.String totalhighString -> G
-    java.lang.String totalmediumString -> H
-    java.lang.String totallowString -> I
-    java.lang.String doneString -> o
-    android.widget.ListView list -> p
-    android.widget.EditText inputfield -> q
-    android.widget.TextView appnameTextView -> r
-    android.widget.TextView totalitemsTextView -> s
-    android.widget.TextView totalcheckeditemsTextView -> t
-    android.widget.TextView totalHighTextView -> u
-    android.widget.TextView totalMedTextView -> v
-    android.widget.TextView totalLowTextView -> w
-    android.widget.Button addButton -> x
-    android.widget.Button overwriteButton -> y
-    android.widget.Button clearButton -> z
-    android.widget.Button doneButton -> A
-    android.widget.Button deleteButton -> B
-    android.widget.Spinner priorityspinner -> C
-    com.productivity.tasklistmanagerpro.launcher.MainActivity$MyAdapter adapter -> D
+    java.lang.String totaliteminlistString -> K
+    java.lang.String totalcheckedString -> L
+    java.lang.String totalhighString -> M
+    java.lang.String totalmediumString -> N
+    java.lang.String totallowString -> O
+    java.util.Random itemstatusrandom -> o
+    int itemstatuschooser -> p
+    double overallProgress -> q
+    java.lang.String[] itemstatusatZero -> P
+    java.lang.String[] itemstatusatTwentyFour -> Q
+    java.lang.String[] itemstatusatFortyNine -> R
+    java.lang.String[] itemstatusatSeventyFour -> S
+    java.lang.String[] itemstatusatOneHundred -> T
+    java.lang.String[] itemstatusatuncheckItem -> U
+    android.widget.TextView percentcompleteinfo -> r
+    android.widget.TextView itemstatus -> s
+    android.widget.ProgressBar progresscomplete -> t
+    java.lang.String percentTextcomplete -> V
+    java.lang.String doneString -> u
+    android.widget.ListView list -> v
+    android.widget.EditText inputfield -> w
+    android.widget.TextView appnameTextView -> x
+    android.widget.TextView totalitemsTextView -> y
+    android.widget.TextView totalcheckeditemsTextView -> z
+    android.widget.TextView totalHighTextView -> A
+    android.widget.TextView totalMedTextView -> B
+    android.widget.TextView totalLowTextView -> C
+    android.widget.Button addButton -> D
+    android.widget.Button overwriteButton -> E
+    android.widget.Button clearButton -> F
+    android.widget.Button doneButton -> G
+    android.widget.Button deleteButton -> H
+    android.widget.Spinner priorityspinner -> I
+    com.productivity.tasklistmanagerpro.launcher.MainActivity$MyAdapter adapter -> J
     void onCreate(android.os.Bundle) -> onCreate
     void onDestroy() -> onDestroy
     void getDatabase() -> a
@@ -8238,7 +8251,10 @@ com.productivity.tasklistmanagerpro.launcher.MainActivity -> com.productivity.ta
     boolean importCSVFile() -> j
     boolean exportToCSVFile() -> g
     boolean exitApp() -> h
+    void setprogressbarcolors(double,int) -> a
     java.lang.String access$0(com.productivity.tasklistmanagerpro.launcher.MainActivity) -> a
+    java.lang.String access$1(com.productivity.tasklistmanagerpro.launcher.MainActivity) -> b
+    java.lang.String[] access$2(com.productivity.tasklistmanagerpro.launcher.MainActivity) -> c
 com.productivity.tasklistmanagerpro.launcher.MainActivity$1 -> com.productivity.tasklistmanagerpro.launcher.a:
     com.productivity.tasklistmanagerpro.launcher.MainActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick

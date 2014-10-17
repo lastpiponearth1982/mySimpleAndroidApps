@@ -7938,6 +7938,7 @@ com.productivity.tasklistmanagerpro.R$id: int inputfield
 com.productivity.tasklistmanagerpro.R$id: int inputfieldgroup
 com.productivity.tasklistmanagerpro.R$id: int itemcountgroup
 com.productivity.tasklistmanagerpro.R$id: int itemgroup
+com.productivity.tasklistmanagerpro.R$id: int itemstatus
 com.productivity.tasklistmanagerpro.R$id: int listMode
 com.productivity.tasklistmanagerpro.R$id: int list_item
 com.productivity.tasklistmanagerpro.R$id: int maxchargroup
@@ -7948,11 +7949,15 @@ com.productivity.tasklistmanagerpro.R$id: int none
 com.productivity.tasklistmanagerpro.R$id: int normal
 com.productivity.tasklistmanagerpro.R$id: int okbutton
 com.productivity.tasklistmanagerpro.R$id: int overwrite
+com.productivity.tasklistmanagerpro.R$id: int percentcomplete
+com.productivity.tasklistmanagerpro.R$id: int percentcompleteinfo
 com.productivity.tasklistmanagerpro.R$id: int preferences
 com.productivity.tasklistmanagerpro.R$id: int preferencestext
 com.productivity.tasklistmanagerpro.R$id: int priorityspinner
 com.productivity.tasklistmanagerpro.R$id: int progress_circular
 com.productivity.tasklistmanagerpro.R$id: int progress_horizontal
+com.productivity.tasklistmanagerpro.R$id: int progressbargroup
+com.productivity.tasklistmanagerpro.R$id: int progresscomplete
 com.productivity.tasklistmanagerpro.R$id: int radio
 com.productivity.tasklistmanagerpro.R$id: int saveandexitgroup
 com.productivity.tasklistmanagerpro.R$id: int savepreferences
