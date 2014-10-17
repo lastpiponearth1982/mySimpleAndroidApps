@@ -30,12 +30,52 @@
             android:text="@string/textclock" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/percentcomplete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/percentcompleteinfo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.65"
+            android:text="Percent Complete: "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:id="@+id/progressbargroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.35"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <ProgressBar
+                android:id="@+id/progresscomplete"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5" />
+
+            <TextView
+                android:id="@+id/itemstatus"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:gravity="center"
+                android:text="You can do it." />
+        </LinearLayout>
+    </LinearLayout>
+
     <ListView
         android:id="@android:id/list"
+        style="@android:style/Theme.Holo.Light.DarkActionBar"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.52"
-        style="@android:style/Theme.Holo.Light.DarkActionBar"
         android:clickable="true" >
     </ListView>
 
