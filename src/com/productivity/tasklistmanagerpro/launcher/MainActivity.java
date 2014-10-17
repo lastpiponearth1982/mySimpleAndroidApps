@@ -683,6 +683,7 @@ public class MainActivity extends ListActivity {
 
 										adapter.notifyDataSetChanged();
 										updateItemCount();
+										overwriteButton.setEnabled(false);
 
 									}
 								})
@@ -694,6 +695,7 @@ public class MainActivity extends ListActivity {
 									}
 								});
 				confirmoverwrite.show();
+
 			}
 		};
 		// listener for clear inputfield
